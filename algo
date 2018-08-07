@@ -1,0 +1,31 @@
+IF query is not empty THEN
+    IF querymod is empty THEN
+	store query
+	return mod
+    END
+ELSE
+    IF query was stored THEN
+	read query
+    ELSE
+	return error
+    END
+END
+
+submit query
+
+-----------------------------------
+
+IF query is empty THEN
+    IF query was stored THEN
+	read query
+    ELSE
+	return error
+    END
+ELSE
+    IF querymod is empty THEN
+	store query
+	return mod
+    END
+END	
+
+submit query

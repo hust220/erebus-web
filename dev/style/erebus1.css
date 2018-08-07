@@ -1,0 +1,610 @@
+* {
+    padding:0;
+    margin:0 auto;
+    font-family:Tahoma, serif;
+}
+
+body {
+    color:#777f7d;
+    background-color:#FFF;
+    font-size:110%;
+    width:990px;
+}
+
+
+img {
+    border:0;
+}
+
+a {
+    color:#2555c0;
+    text-decoration:underline;
+    font-weight:bold;
+}
+a:hover {
+    text-decoration:none;
+}
+
+p.space {
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+}
+
+.space {
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+}
+
+.clearing {
+//    clear:both;
+    display:block;
+}
+
+.error {
+    color:red;
+    font-style:italic;
+}
+
+div.message {
+    margin-top:2em;
+    margin-bottom:1em;
+    font-size:1.2em;
+}
+
+div.message span {
+    margin-top:2em;
+    display:block;
+}
+
+div.button {
+    margin:1em;
+    float:left;
+    background-color: #d6d6d6;
+    border: solid 0.25em #d6d6d6;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+div.button a {
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    padding:0.25em;
+    text-decoration: none;
+    display:block;
+    color: 0;
+}
+
+div.button :hover {
+    background-color: #f6f6f6;
+}
+
+.label .button {
+    float:none;
+    margin:0 0 3px 23px;
+    +margin:0 0 3px 17px;
+    vertical-align:middle;
+}
+
+.hiddentab {
+    display:none;
+}
+
+/* Columns */
+
+#leftColumn {
+    margin-top:15px;
+    float:left;
+    display:inline;
+    width:18%;
+//    padding-left:1px;
+//    padding-right:1em;
+//    height: 90%;
+}
+
+html>/**/body #leftColumn{
+   margin-left:1px;
+}
+
+#middleColumn {
+    margin-top:15px;
+    float:left;
+    width:63%;
+    background-color:white;
+//    padding-left:1em;
+//    padding-right:1em;
+}
+
+#middleColumn p{
+    text-align:justify;
+}
+
+#rightColumn {
+    margin-top:14px;
+//    padding-left:1em;
+    float:right;
+    width:18%;
+//    height: 90%;
+}
+
+html>/**/body #rightColumn {
+//    margin-right:10px;
+}
+
+#middleColumn ul {
+    padding:10px 0 10px 16px;
+}
+
+#header {
+	background:				url(img/pattern_159.png);
+    border-radius: 28px;
+    -moz-border-radius: 28px;
+	height:					44px;
+	text-align:				left;
+	margin-top:				1em;
+	border: solid 1px #c85b40;
+//	border: solid 1px #5025a0;
+//	width:					850px;
+}
+
+#main {
+    font-size:0.6875em;
+}
+
+li var {
+    text-decoration:underline;
+    font-style:normal;
+}
+
+/* Menu */
+div.navimain {
+//    background:url('/static/images/menu_background.gif') bottom no-repeat;
+    background-color:#f4f4f4;
+    padding:15px 16px 5px 15px;
+    margin:25px 0 28px 0;
+//    border-top:1px dotted #cacaca;
+//    border-bottom:1px dotted #cacaca;
+    border-top:1px solid #c85b40;
+    border-bottom:1px solid #c85b40;
+}
+
+div#sep {
+    height: 1px;
+    background-color: #adadad;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+a.navlink {
+    padding: 5px 3px 5px 5px;
+    text-decoration:none;
+    display:block;
+    background-image:url('img/icons.png');
+    background-repeat:no-repeat;
+    background-position:2px 50px;
+    min-height:16px;
+}
+
+a.navlink span {
+    font-family: webdings;
+    color:#d6d6d6;
+    padding-right:0.2em;
+    font-size:x-large;
+    font-weight:normal;
+}
+
+a.navlink:hover{
+    padding: 5px 0px 5px 5px;
+//    border-left: 3px double #d6d6d6;
+    border-right: 3px double #d6d6d6;
+//    text-decoration:none;
+//    display:block;
+}
+
+a.navlink:hover span {
+    color:#fe7115;
+}
+
+a.navlink:selected{
+    padding: 5px 0px 5px 5px;
+//    border-left: 3px double #d6d6d6;
+    border-right: 3px double #d6d6d6;
+    text-decoration:none;
+    display:block;
+}
+
+a.navlink:active {
+    padding: 5px 0px 5px 5px;
+    border-left: 3px double #ffd6d6;
+    border-right: 3px double #ffd6d6;
+    text-decoration:none;
+    display:block;
+}
+
+.navimain h1 {
+    font-size: 1.1em;
+    line-height: 200%;
+}
+
+.navimain input, .navimain textarea {
+    width:100%;
+    border:none;
+    margin-bottom:1em;
+}
+
+.warning {
+    background-image:url('img/warn.png');
+    background-repeat:no-repeat;
+    background-position:left top;
+}
+
+span.navsymb {
+
+}
+
+#linkhome {
+    background-position:2px -50px;
+}
+
+#linkhome:hover {
+    background-position:2px 0px;
+}
+
+#linksubmit {
+    background-position:2px -150px;
+}
+
+#linksubmit:hover {
+    background-position:2px -100px;
+}
+
+#linkresults {
+    background-position:2px -250px;
+}
+
+#linkresults:hover {
+    background-position:2px -200px;
+}
+
+#linkprofile {
+    background-position:2px -350px;
+}
+
+#linkprofile:hover {
+    background-position:2px -300px;
+}
+
+/* Forms */
+
+input:-webkit-autofill {
+    color: #d6d6d6; !important; /*important not necessary but if they think so ;)*/
+    background-color: #FFF; !important; /*important not necessary but if they think so ;)*/
+}
+
+.text_field {
+    margin:1px 0 1px 0;
+    width:85px;
+    padding:2px 2px;
+    border:1px solid #e6e6e6;
+    background-color:#FFF;
+}
+
+.subtext {
+    margin:2px 0 12px 0;
+    padding:2px 2px 2px 2px;
+    border:1px solid #e6e6e6;
+    background-color:#FFF;
+}
+
+.subfile {
+    width: 50%;
+}
+
+#registerForm .text_field {
+    width:125px;
+}
+
+.btext {
+    display:block;
+}
+
+input, textarea, select {
+    font-size:0.9em;
+    color:#777f7d;
+}
+
+select {
+    border:1px solid #777f7d;
+    background-color:#fff;
+    text-align:justify;
+    font-size:1em;
+    vertical-align:middle;
+//    font-family: Courier, monospace;
+}
+
+td select {
+    text-align:inherit;
+//    font-family: inherit;
+    border:none;
+}
+
+.submit_button{
+    clear:both;
+    float:right;
+    margin:5px 0 10px 0;
+}
+
+.edit_button{
+    float:left;
+    padding-top:10px;
+    padding-left:28px;
+}
+.check{
+    margin-right:7px;
+    vertical-align:middle;
+}
+
+option {
+    padding:0 10px;
+}
+
+div.showcompact {
+    height: 20em;
+    overflow: auto;
+    margin:0;
+}
+
+/* Login page */
+
+div.loginpage {
+//    font-size:0.875em;
+}
+
+.textcontent {
+    padding: 0 2em 0 2em;
+}
+
+.textcontent h2 {
+    font-family: Helvetica, sans;
+}
+
+.textcontent h3 {
+    font-family: Helvetica, sans;
+}
+
+.formBlock .formTitle{
+    margin:13px 0;
+    font-size:0.6875em;
+    float:left;
+    clear:both;
+}
+
+.formBlock .clearing{
+    height:1px;
+}
+
+.form_block_border{
+    border-bottom:2px solid #e6e6e6;
+    margin:2px -7px 0 -7px; 
+}
+
+.form_title, .form_title_code{
+    _background:url('/static/images/grey_tri.gif') no-repeat 1px 4px;
+    padding-left:12px;
+    margin:12px 0 3px 0;
+    color:#777f7d;
+}
+
+.formTitleCode{
+    float:left;
+    margin-top:38px;
+}
+
+.formBlock{
+    background-color:#f4f4f4;
+    padding:5px 6px 5px 5px;
+    margin:25px 0 28px 0;
+//    border-top:1px dotted #cacaca;
+//    border-bottom:1px dotted #cacaca;
+    border-top:1px solid #c85b40;
+    border-bottom:1px solid  #c85b40;
+}
+
+.formSection {
+    margin: 1.0em 0 1.0em 0;
+    vertical-align:middle;
+}
+
+.formLabel {
+	line-height:			2.0;
+	font-weight: bold;
+	vertical-align:middle;
+	margin-right:0.5em;
+}
+
+.subformblock {
+    margin-bottom:1em;
+    background-color:#f4f4f4;
+    padding: 0.5em 0 0 0.5em;
+}
+
+.subbtn {
+//    width: 10em;
+    background-color:#fff;
+    border: 1px solid #787878;
+    padding:0.1em;
+}
+
+/* tables */
+
+table.queryTable {
+    margin-left:0;
+    border-bottom:                  solid 1px #e6e6e6;
+    border-top:                     solid 1px #e6e6e6;
+    margin-left: 0;
+    border-bottom: solid 1px #e6e6e6;
+    border-top: solid 1px #e6e6e6;
+    border-left: none;
+    border-right: none;
+    font-size: 1.0em;
+    font-family: monospace;
+}
+
+table.reslistTable {
+    margin-left:0;
+    border-bottom:                  solid 1px #e6e6e6;
+    border-top:                     solid 1px #e6e6e6;
+    margin-left: 0;
+    border-bottom: solid 1px #e6e6e6;
+    border-top: solid 1px #e6e6e6;
+    border-left: none;
+    border-right: none;
+    font-size: 1.0em;
+    font-family: monospace;
+}
+
+tr.queryTitle {
+	background:			#e6e6e6;
+}
+
+th.queryTitle {
+	padding-left			:0.5em;
+	padding-right			:0.5em;
+}
+
+td.queryBody {
+    padding-left:			0.5em;
+    padding-right:			0.5em;
+    text-align:			center;
+}
+
+tr.qCompleted {
+    border-left:	1px solid #d6d6d6;
+}
+
+tr.qCompleted:hover {
+    border-left:	1px solid #d6d6d6;
+    border-right:	1px solid #d6d6d6;
+    background:         #f4f4f4;
+    cursor: pointer;
+}
+
+td.qActionCol {
+	background:    #fff;
+	cursor: default;
+}
+
+td>a {
+    text-decoration:	none;
+    color:		#777f7d;
+}
+
+table.queryTable a {
+    display:		block;
+    text-decoration:	none;
+    color:		#777f7d;
+}
+
+th>a {
+    border: 0;
+    text-decoration:	none;
+    display:		block;
+    color:		#777f7d;
+    white-space:nowrap;
+}
+
+#footer {
+    padding-top: 2em;
+    text-align:	left;
+    font:					normal bold 12px "trebuchet ms", georgia, arial;
+}
+
+div.indexTitle {
+    font-size:1.25em;
+    font-weight: bold;
+    font-family: Helvetica, sans;
+    padding-bottom:0.25em;    
+}
+
+table.subTable {
+    margin-left:0;
+    border-bottom:                  solid 1px #e6e6e6;
+    border-top:                     solid 1px #e6e6e6;
+    border-left:                  none;
+    border-right:                     none;
+    font-size: 1.0em;
+    font-family: monospace;
+}
+
+table.subparamtable {
+    margin-left:0;
+    border:                     none;
+    font-size: 1.0em;
+}
+
+table.subparamtable td {
+    vertical-align:middle;
+}
+
+table.subparamtable input {
+    display:inline;
+    margin:0;
+}
+tr.subTitle {
+    background:			#e6e6e6;
+}
+
+th.subTitle {
+	padding-left			:0.5em;
+	padding-right			:0.5em;
+}
+
+td.subBody {
+    padding-left:			0.5em;
+    padding-right:			0.5em;
+    text-align:			left;
+}
+
+div.subscroll {
+    height: 80px;
+    overflow: auto;
+    margin:0;
+}
+
+div.subscrollbig {
+    height: 20em;
+    overflow: auto;
+    margin:0;
+}
+
+table.subScroll {
+    width:100%;
+    border-spacing:0;
+}
+
+thead.subScroll {
+    visibility:hidden;
+}
+
+th.subScroll {
+    line-height:0;
+}
+
+tbody.subScroll {
+    text-align:center;
+}
+
+/* info box */
+
+span.info {
+    display:none;
+}
+
+.infobox {
+//    position:absolute;
+    min-height:30em;
+}
+
+.infobox h1 {
+    font-size: 1.1em;
+    line-height: 200%;
+}
+

@@ -1,0 +1,36 @@
+<?php
+require('config/config.inc.php');
+pagesetup(true);
+
+$secret = "emailconfirmmagiccode";
+
+#get sumitted data and check format
+$username=$_GET['username'];
+if (strlen($username)>10 || eregi('^0-9a-z',$username) ) {die("Invalid username");}
+$key=$_GET['key'];
+if (strlen($key) != 40 || eregi('^0-9a-z',$key) ){die("Invalid confirmation");}
+
+#check entry in database
+$query = "SELECT email, secret FROM $tableusers WHERE username='$username'";
+$result = mysql_query($query);
+$row = mysql_fetch_array($result);
+if ($row == 0) {
+	die("No user found.");
+}
+$email=$row["email"];
+$secret=$row["secret"];
+
+if( sha1(md5($email) . md5($secret)) != $key ){ die("Invalid confirmation key");};
+
+#now the email is confirmed
+$query = "UPDATE $tableusers SET emailConfirmed='1' WHERE username='$username'";
+$result = mysql_query($query) or die("Failed to update database");
+
+header( 'refresh: 2; url="index.php"' );
+
+?>
+<html>
+<body>
+	Email confirmed successfully. Redirecting to eris home in 2 seconds... 
+</body>
+</html>
