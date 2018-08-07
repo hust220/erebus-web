@@ -1,3 +1,6 @@
+<?php
+require_once('utils.php');
+?>
 		<div class="navimain">
 		    <?php if(empty($_SESSION['username'])): ?>
 			<div class='navi'><a href="login.php" class="navlink" id=linklogin> Login </a><span class=info>Go to Log in page.</span></div>
@@ -15,7 +18,7 @@
 			<div class='navi'><a href="logout.php" class="navlink" id=linklogout> Log out </a><span class=info>End the current Erebus session.</span></div>
 		    <?php endif ?>
 			<?php
-			if ($_SESSION['level'] >= 3) { # administration menu
+			if (getVal($_SESSION, 'level', 0) >= 3) { # administration menu
 			?>
 			<div class='navi'><a href="useradmin.php" class="navlink"> <font color='red'> User Admin </font></a></div>
 			<div class='navi'><a href="jobadmin.php" class="navlink"> <font color='red'> Job Admin </font></a></div>
